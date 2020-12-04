@@ -99,7 +99,7 @@ export default function App() {
             placeholder="Search for floor plan or amenity"
             />
       <Text style={{ color: "#fff" }}>Hi Everyone 212</Text>
-      
+      <ScrollView horizontal = {true}>
         {videos.filter((video) => {
           return video.name.toLowerCase().includes(search.toLowerCase());
         }).map((video, idx) => {
@@ -113,6 +113,7 @@ export default function App() {
             </>
           )
         }) }
+       </ScrollView>
 
             <TextInput value={video.name} 
             style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
